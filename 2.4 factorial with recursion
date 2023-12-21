@@ -1,0 +1,18 @@
+#include<stdio.h>
+int fact(int n)
+{
+  if(n)
+    return (n*fact(n-1));
+  else
+    return 1;
+}
+int main()
+{
+  printf("factorial using recursion\n");
+  printf("TANUJA P , 192321052\n");
+  int num;
+  printf("Enter the Number : \n");
+  scanf("%d",&num);
+  printf("Factorial of %d is %d ",num,fact(num));
+  return 0;
+}

@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main()
+{
+  printf("merging of array \n");
+  printf("TANUJA P , 192321052\n");
+  int n1=5, n2=5 ,arr_result,i,j;
+  int a[5]={1,2,3,4,5};
+  int b[5]={6,7,8,9,10};
+  arr_result=n1+n2;
+  int c[arr_result];
+  for(i=0;i<n1;i++)
+  {
+    c[i]=a[i];
+  }
+  for (i = 0, j = n1 ;j < arr_result && i < n2; i++, j++)
+  {
+    c[j] = b[i];
+  }
+  printf("After merging the array : \n");
+  for(i=0;i<arr_result;i++)
+  {
+     printf("%d",c[i]);
+  }
+  return 0;
+
+}

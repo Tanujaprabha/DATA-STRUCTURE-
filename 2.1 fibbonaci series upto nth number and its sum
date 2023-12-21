@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main()
+{
+    printf("fibbonacci series upto nth number and its sum \n");
+    printf("TANUJA P , 192321052\n");
+    int n;
+    printf("Enter the number of terms in the Fibonacci series:\n ");
+    scanf("%d", &n);
+
+    int first = 0, second = 1, next, sum = 0;
+
+    printf("Fibonacci Series up to %d terms: ", n);
+    for (int i = 1; i <= n; i++)
+    {
+        printf("%d ", first);
+        sum += first;
+        next = first + second;
+        first = second;
+        second = next;
+    }
+
+    printf("\nSum of Fibonacci Series up to %d terms: %d\n", n, sum);
+
+    return 0;
+}

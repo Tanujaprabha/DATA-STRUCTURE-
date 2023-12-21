@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main()
+{
+  printf("DISPLAY LOCATION \n");
+  printf("TANUJA P , 192321052 \n");
+  int n,i;
+  printf("enter the number of elements : \n");
+  scanf("%d",&n);
+  int arr[n];
+  printf("ENTER %d ELEMENTS",n);
+  for(i=0;i<n;i++)
+  {
+    scanf("%d",&arr[i]);
+  }
+  int search;
+  printf("enter the element use wanted to search : \n");
+  scanf("%d",&search);
+  printf("search element position is : \n");
+  for(i=0;i<n;i++)
+  {
+    if(search==arr[i])
+      printf("%d",i);
+  }
+}

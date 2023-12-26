@@ -43,18 +43,19 @@ Day 3 – Singly Linked List
 
 
 
-Day 4
-4.1 Implement DLL with following operations
-Insert(Beg,Mid,End)
-Delete(Beg,Mid,End)
-Display
-Search
-Sort
-Find Max and Min
+Day 4 ---- 4.1 Implement DLL with following operations
+1. Insert(Beg,Mid,End)
+2. Delete(Beg,Mid,End)
+3. Display
+4. Search
+5. Sort
+6. Find Max and Min
+
+
 4.2 Implement Singly CLL with following operations
-Insert(Beg,Mid,End)
-Delete(Beg,Mid,End)
-Display
-Search
-Sort
-Find Max and Min
+1. Insert(Beg,Mid,End)
+2. Delete(Beg,Mid,End)
+3. Display
+4. Search
+5. Sort
+6. Find Max and Min

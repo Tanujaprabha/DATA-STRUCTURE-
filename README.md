@@ -72,14 +72,17 @@ isEmpty( )
 isFull( )
 Display( )
 Peek( )
-
 2 .Implement Stack using Linked List with following operations
 Push()
 Pop()
 Display( )
 Peek( )
-
 3.Consider 2 stacks, add bottom most element and top most element print the value
-
 4. Given a stack, delete the middle element of the stack without using any additional data structure.
-Middle element:- floor((size_of_stack+1)/2) (1-based indexing) from bottom of the stack.
+Middle element:- floor((size_of_stack+1)/2) (1-based indexing) from bottom of the stack
+
+day 6
+
+1. Write a function that takes a string containing parentheses , square brackets  and curly braces "  ( { [ ] } " and determines if the symbols are balanced.
+2. write a function to evaluate a given postfix expression. The expression is "44 2 / 6 -"
+3. Write a function to convert an infix expression to postfix notation. The infix expression is " "(a + b) * c + d "

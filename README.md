@@ -55,6 +55,7 @@ Day 4
 4. Search
 5. Sort
 6. Find Max and Min
+
 4.2 Implement Singly CLL with following operations
 1. Insert(Beg,Mid,End)
 2. Delete(Beg,Mid,End)

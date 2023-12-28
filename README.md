@@ -66,20 +66,24 @@ Day 4
 
 
 Day 5
-1.Implement Stack using array with following operations
-Push()
-Pop()
-isEmpty( )
-isFull( )
-Display( )
-Peek( )
-2 .Implement Stack using Linked List with following operations
-Push()
-Pop()
-Display( )
-Peek( )
-3.Consider 2 stacks, add bottom most element and top most element print the value
-4. Given a stack, delete the middle element of the stack without using any additional data structure.
+5.1 Implement Stack using array with following operation
+1. Push()
+2. Pop()
+3. isEmpty( )
+4. isFull( )
+5. Display( )
+6. Peek( )
+
+
+5.2 Implement Stack using Linked List with following operations
+1. Push()
+2. Pop()
+3. Display( )
+4. Peek( )
+
+5.3 Consider 2 stacks, add bottom most element and top most element print the value
+
+5.4 Given a stack, delete the middle element of the stack without using any additional data structure.
 Middle element:- floor((size_of_stack+1)/2) (1-based indexing) from bottom of the stack
 
 Day 6

@@ -1,0 +1,132 @@
+#include<stdio.h>
+#include<stdlib.h>
+struct node
+{
+    int data;
+    struct node *next;
+}*rear,*front,*n;
+
+void enqueue(int value)
+{
+    n= (struct node*)malloc(sizeof(struct node));
+    n->data = value;
+    n->next = NULL;
+
+    if (rear==NULL)
+    {
+        front = rear = n;
+        n->next = front;
+    }
+    else
+    {
+        rear->next = n;
+        rear = n;
+        n->next = front;
+    }
+    printf("Enqueued %d into the queue\n", value);
+}
+
+
+void dequeue()
+{
+    struct node *t;
+    if(front==NULL)
+        printf("QUEUE IS EMPTY : ");
+    else
+    {
+        t=front;
+        int res=t->data;
+        front = front->next;
+        rear->next = front;
+        free(t);
+        printf("%d deleted element : \n",res);
+    }
+}
+
+
+void display()
+{
+    struct node *t;
+    if(front==NULL)
+        printf("QUEUE IS EMPTY:\n");
+    else
+    {
+        printf("QUEUE ELEMENTS: \n");
+        t=front;
+        while(t!=NULL)
+        {
+            printf("%d->",t->data);
+            t=t->next;
+        }
+    }
+}
+
+int Front()
+{
+    if (front==NULL)
+    {
+        printf("Queue is empty.\n");
+        return -1;
+    }
+    return front->data;
+}
+
+int Rear()
+{
+    if (front==NULL)
+    {
+        printf("Queue is empty.\n");
+        return -1;
+    }
+    return rear->data;
+}
+
+
+int main()
+{
+
+    int choice, item;
+
+    while (1)
+    {
+        printf("\nQueue Operations:\n");
+        printf("1. Enqueue\n");
+        printf("2. Dequeue\n");
+        printf("3. Display\n");
+        printf("4. Front\n");
+        printf("5. Rear\n");
+        printf("6. Exit\n");
+        printf("Enter your choice: ");
+
+        scanf("%d", &choice);
+
+        switch (choice)
+        {
+            case 1:
+                printf("Enter value to enqueue: ");
+                scanf("%d", &item);
+                enqueue(item);
+                break;
+            case 2:
+                dequeue();
+                break;
+            case 3:
+                display();
+                break;
+            case 4:
+                printf("Front element: %d\n", Front());
+                break;
+            case 5:
+                printf("Rear element: %d\n", Rear());
+                break;
+            case 6:
+                printf("Exiting...\n");
+                exit(0);
+            default:
+                printf("Invalid choice! Please enter a valid menu option.\n");
+        }
+    }
+
+    return 0;
+}
+

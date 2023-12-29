@@ -95,38 +95,38 @@ Day 6
 
 Day 7
 
-1. Implement Queue using array with following operations
-Enqueue( )
-Dequeue( )
-isEmpty( )
-isFull( )
-Display( )
-front( ) orPeek( )
-rear( )
+7.1 Implement Queue using array with following operations
+1. Enqueue( )
+2. Dequeue( )
+3. isEmpty( )
+4. isFull( )
+5. Display( )
+6. front( ) orPeek( )
+7. rear( )
 
-2. Implement Queue using Linked List with following operations
-Enqueue( )
-Dequeue( )
-Display( )
-Front( )
-Rear( )
+7.2 Implement Queue using Linked List with following operations
+1. Enqueue( )
+2. Dequeue( )
+3. Display( )
+4. Front( )
+5. Rear( )
 
-3. Implement CircularQueue using array with following operations
-Enqueue( )
-Dequeue( )
-isEmpty( )
-isFull( )
-Display( )
-front( ) orPeek( )
-rear( )
+7.3 Implement CircularQueue using array with following operations
+1. Enqueue( )
+2. Dequeue( )
+3. isEmpty( )
+4. isFull( )
+5. Display( )
+6. front( ) orPeek( )
+7. rear( )
 
-4. Implement CircularQueue using Linked List with following operations
-Enqueue( )
-Dequeue( )
-Display( )
-Front( )
-Rear( )
+7.4 Implement CircularQueue using Linked List with following operations
+1. Enqueue( )
+2. Dequeue( )
+3. Display( )
+4. Front( )
+5. Rear( )
 
-5. Implement Stack using two queues
+7.5 Implement Stack using two queues
 
-6. Implement Queue using two Stacks
+7.6 Implement Queue using two Stacks

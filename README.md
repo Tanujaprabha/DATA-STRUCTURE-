@@ -137,3 +137,12 @@ Day 7
 7.5 Implement Stack using two queues
 
 7.6 Implement Queue using two Stacks
+
+
+Day 8
+
+8.1 Implement Binary tree
+
+8.2 Implement Binary Search Tree and perform Insertion and Deletion
+
+8.3 Create Binary Search Tree with Tree Traversal (Inorder, Preorder, Postorder and Level order)

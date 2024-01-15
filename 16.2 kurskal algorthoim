@@ -1,0 +1,91 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+struct Edge
+{
+    int src, dest, weight;
+};
+struct Subset
+{
+    int parent, rank;
+};
+int compareEdges(const void* a, const void* b)
+{
+    return ((struct Edge*)a)->weight - ((struct Edge*)b)->weight;
+}
+int find(struct Subset subsets[], int i)
+{
+    if (subsets[i].parent != i)
+        subsets[i].parent = find(subsets, subsets[i].parent);
+
+    return subsets[i].parent;
+}
+void unionSets(struct Subset subsets[], int x, int y)
+{
+    int rootX = find(subsets, x);
+    int rootY = find(subsets, y);
+
+    if (subsets[rootX].rank < subsets[rootY].rank)
+        subsets[rootX].parent = rootY;
+    else if (subsets[rootX].rank > subsets[rootY].rank)
+        subsets[rootY].parent = rootX;
+    else
+    {
+        subsets[rootY].parent = rootX;
+        subsets[rootX].rank++;
+    }
+}
+void kruskalMST(struct Edge edges[], int V, int E)
+{
+    struct Edge result[V];
+    int resultIndex = 0;
+    int i = 0;
+    qsort(edges, E, sizeof(edges[0]), compareEdges);
+    struct Subset* subsets = (struct Subset*)malloc(V * sizeof(struct Subset));
+    for (int v = 0; v < V; v++)
+    {
+        subsets[v].parent = v;
+        subsets[v].rank = 0;
+    }
+    while (resultIndex < V - 1 && i < E)
+    {
+        struct Edge nextEdge = edges[i++];
+
+        int x = find(subsets, nextEdge.src);
+        int y = find(subsets, nextEdge.dest);
+        if (x != y)
+        {
+            result[resultIndex++] = nextEdge;
+            unionSets(subsets, x, y);
+        }
+    }
+    printf("Edge   Weight\n");
+    for (int j = 0; j < resultIndex; j++)
+    {
+        printf("%d - %d    %d\n", result[j].src, result[j].dest, result[j].weight);
+    }
+
+    free(subsets);
+}
+
+int main()
+{
+    printf("kruskal algorthim\n");
+    printf("TANUJA P ,192321052\n");
+    printf("\n");
+    int V = 4;
+    int E = 5;
+
+    struct Edge edges[] = {
+        {0, 1, 10},
+        {0, 2, 6},
+        {0, 3, 5},
+        {1, 3, 15},
+        {2, 3, 4}
+    };
+
+    kruskalMST(edges, V, E);
+
+    return 0;
+}
+

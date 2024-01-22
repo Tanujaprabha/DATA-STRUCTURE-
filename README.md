@@ -198,3 +198,22 @@ Day 15
 
 15.3 Implement a C Program to topological order 
 
+Day 16
+
+16.1 Implement a C Program to find MST for the given graph using Prim's Algorithm
+
+16.2 Implement a C Program to find MST for the given graph using Kruskal's Algorithm
+
+Day 17
+
+17.1 Implement a C Program to find the shortest path for the given weighted directed graph using Dijkstra's Algorithm
+
+17.2 Implement a C Program to find MST shortest path for the given unweighted directed graph using Dijkstra's Algorithm
+
+Day 18 
+
+18.1 Implement a C program to perform breadth first search
+
+18.2 Implement a C program to perform deepth first search 
+
+
